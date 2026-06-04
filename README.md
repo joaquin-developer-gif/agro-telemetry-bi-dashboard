@@ -2,9 +2,40 @@
 
 Mini proyecto de Business Intelligence orientado al análisis de telemetría en el sector AgTech.
 
-El objetivo del proyecto es simular datos de telemetría de máquinas agrícolas y transformarlos en métricas útiles para negocio usando Python, SQLite, SQL analítico y exportaciones listas para dashboards.
+El objetivo del proyecto es simular datos de telemetría de máquinas agrícolas y transformarlos en métricas útiles para negocio usando Python, SQLite, SQL analítico, archivos CSV procesados y un dashboard ejecutivo en Power BI.
 
-Este proyecto fue creado como práctica para una posición de **BI Developer Jr / Semi-Sr**, trabajando conceptos como SQL analítico, modelado de datos, métricas de negocio, dashboards y flujo de trabajo con Git.
+Este proyecto fue creado como práctica para una posición de **BI Developer Jr / Semi-Sr**, trabajando conceptos como SQL analítico, modelado de datos, métricas de negocio, dashboards, visualización de datos y flujo de trabajo con Git/GitHub.
+
+---
+
+## Estado del proyecto
+
+El proyecto cuenta actualmente con dos etapas principales:
+
+### Etapa 1 - Python, SQLite y SQL
+
+En esta etapa se construyó el pipeline de datos:
+
+* Generación de datos simulados de telemetría.
+* Carga de datos en SQLite.
+* Creación de tablas SQL.
+* Consultas analíticas de negocio.
+* Creación de vistas SQL.
+* Exportación de archivos CSV procesados para herramientas BI.
+
+### Etapa 2 - Power BI Dashboard
+
+En esta etapa se desarrolló un dashboard ejecutivo en Power BI utilizando los CSV procesados de la Etapa 1.
+
+El dashboard permite visualizar:
+
+* Total de combustible usado.
+* Total de horas trabajadas.
+* Total de alertas operativas.
+* Total de máquinas.
+* Evolución diaria del consumo de combustible.
+* Consumo de combustible por zona.
+* Interactividad entre gráficos y KPIs.
 
 ---
 
@@ -52,8 +83,9 @@ El proyecto incluye:
 * SQLite
 * SQL
 * CSV
+* Power BI
+* Power Query
 * Git / GitHub
-* Exportaciones listas para Power BI, Metabase o QuickSight
 
 ---
 
@@ -90,6 +122,10 @@ agro-telemetry-bi-dashboard/
 │   ├── create_views.py
 │   └── export_dashboard_csv.py
 │
+├── powerbi/
+│   ├── agro_telemetry_dashboard.pbix
+│   └── executive-overview.png
+│
 ├── dashboards/
 │   └── screenshots/
 │
@@ -114,13 +150,13 @@ Tablas y vistas SQL
     ↓
 Exportaciones CSV procesadas
     ↓
-Dashboard BI
+Dashboard ejecutivo en Power BI
 ```
 
 Este flujo simula una arquitectura simplificada de datos:
 
 ```text
-Raw data → Modelo SQL → Datos procesados → Dashboard
+Raw data → Modelo SQL → Datos procesados → Power BI Dashboard
 ```
 
 En una versión futura con AWS, este mismo flujo podría representarse así:
@@ -169,6 +205,31 @@ ROUND(
 ```
 
 Este score ayuda a identificar qué concesionarios tienen mayor prioridad operativa.
+
+---
+
+## Dashboard Power BI
+
+Se creó un dashboard ejecutivo en Power BI utilizando los archivos CSV procesados generados por el pipeline de Python y SQL.
+
+El archivo principal del dashboard se encuentra en:
+
+```text
+powerbi/agro_telemetry_dashboard.pbix
+```
+
+### Vista Executive Overview
+
+El dashboard incluye una vista ejecutiva con KPIs y gráficos principales:
+
+* Total de combustible usado
+* Total de horas trabajadas
+* Total de alertas
+* Total de máquinas
+* Consumo diario de combustible
+* Consumo de combustible por zona
+
+![Executive Overview - Power BI](powerbi/executive-overview.png)
 
 ---
 
@@ -242,30 +303,6 @@ Estos archivos pueden ser utilizados en:
 
 ---
 
-## Ideas para el dashboard
-
-El dashboard puede incluir las siguientes métricas visuales.
-
-### Tarjetas KPI
-
-* Total de máquinas
-* Total de concesionarios
-* Total de zonas
-* Total de horas trabajadas
-* Total de combustible consumido
-* Total de alertas operativas
-
-### Gráficos
-
-* Consumo de combustible por zona
-* Uso de máquinas por concesionario
-* Alertas por concesionario
-* Ranking por score operativo
-* Evolución diaria del consumo
-* Temperatura promedio por modelo de máquina
-
----
-
 ## Valor del proyecto
 
 Este proyecto demuestra cómo transformar datos operativos de telemetría en información útil para la toma de decisiones.
@@ -273,6 +310,12 @@ Este proyecto demuestra cómo transformar datos operativos de telemetría en inf
 No se enfoca solamente en la parte técnica, sino también en preguntas de negocio:
 
 > Un dashboard es útil solamente si ayuda a alguien a tomar una mejor decisión.
+
+El proyecto cubre un flujo BI completo:
+
+```text
+Python + SQL → CSV procesados → Power BI → Insights de negocio
+```
 
 ---
 
@@ -286,14 +329,40 @@ Este proyecto practica habilidades importantes para un puesto BI Developer Jr / 
 * Creación de métricas de negocio
 * Generación de vistas para BI
 * Exportación de datos procesados
+* Creación de dashboard en Power BI
+* Análisis visual de KPIs
 * Pensamiento orientado a negocio
-* Flujo de trabajo con Git
+* Flujo de trabajo con Git/GitHub
+
+---
+
+## Versionado del proyecto
+
+El proyecto fue organizado en ramas y tags para simular un flujo de trabajo profesional.
+
+### Ramas principales
+
+* `main`: versión estable del proyecto.
+* `developer`: rama de desarrollo general.
+* `etapa-1`: versión estable de la Etapa 1.
+* `etapa-2-power-bi`: rama utilizada para desarrollar el dashboard en Power BI.
+
+### Tags
+
+* `v0.1.0-etapa-1`: versión estable con Python, SQLite, SQL y exportación de CSV.
+* `v0.2.0-etapa-2-power-bi`: versión estable con dashboard ejecutivo en Power BI.
 
 ---
 
 ## Futuras mejoras
 
-* Crear dashboard en Power BI
+* Crear más páginas en Power BI:
+
+  * Rendimiento por concesionario
+  * Análisis por máquina
+  * Alertas operativas
+* Agregar medidas DAX personalizadas
+* Mejorar diseño visual del dashboard
 * Crear dashboard en Metabase
 * Agregar almacenamiento en AWS S3
 * Agregar catálogo con AWS Glue
