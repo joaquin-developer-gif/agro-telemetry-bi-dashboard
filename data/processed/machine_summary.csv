@@ -1,0 +1,10 @@
+machine_id,modelo,marca,potencia_hp,cilindrada_litros,concesionario,zona,provincia,total_hours_worked,total_fuel_used,total_alerts,avg_engine_temp
+JD6135-001,John Deere 6135J,John Deere,135,6.8,Agro Centro Río Cuarto,Centro,Córdoba,177.23,1370.61,3,79.87
+JD6135-002,John Deere 6135J,John Deere,135,6.8,Campo Norte Rafaela,Litoral,Santa Fe,183.23,1370.73,2,81.83
+JD6135-003,John Deere 6135J,John Deere,135,6.8,RuralTech Pergamino,Pampeana,Buenos Aires,179.68,1322.94,2,83.32
+JD8270-001,John Deere 8270R,John Deere,270,9.0,RuralTech Pergamino,Pampeana,Buenos Aires,222.36,2988.6,17,85.6
+JD8270-002,John Deere 8270R,John Deere,270,9.0,AgroSur Bahía Blanca,Sur,Buenos Aires,233.12,3076.64,12,88.07
+JD8270-003,John Deere 8270R,John Deere,270,9.0,Norte Agro Servicios,Norte,Salta,222.6,2830.63,10,85.33
+NH-TT490-001,New Holland TT4.90,New Holland,90,2.9,Agro Centro Río Cuarto,Centro,Córdoba,148.34,801.26,1,76.97
+NH-TT490-002,New Holland TT4.90,New Holland,90,2.9,AgroSur Bahía Blanca,Sur,Buenos Aires,153.97,841.63,3,79.06
+NH-TT490-003,New Holland TT4.90,New Holland,90,2.9,Cuyo Máquinas,Cuyo,Mendoza,144.45,824.18,1,77.52

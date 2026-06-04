@@ -1,0 +1,7 @@
+dealer_id,concesionario,zona,provincia,ciudad,total_machines,total_hours_worked,total_fuel_used,total_alerts,avg_engine_temp,operational_score
+CONC-01,Agro Centro Río Cuarto,Centro,Córdoba,Río Cuarto,2,325.57,2171.87,4,78.42,821.79
+CONC-02,Campo Norte Rafaela,Litoral,Santa Fe,Rafaela,1,183.23,1370.73,2,81.83,504.51
+CONC-03,RuralTech Pergamino,Pampeana,Buenos Aires,Pergamino,2,402.04,4311.54,19,84.46,1644.28
+CONC-04,AgroSur Bahía Blanca,Sur,Buenos Aires,Bahía Blanca,2,387.09,3918.27,15,83.57,1480.32
+CONC-05,Cuyo Máquinas,Cuyo,Mendoza,San Rafael,1,144.45,824.18,1,77.52,315.03
+CONC-06,Norte Agro Servicios,Norte,Salta,Salta,1,222.6,2830.63,10,85.33,1038.23

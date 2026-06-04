@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Database
+db/*.db
+db/*.sqlite
+db/*.sqlite3
+
+# Environment
+.env
+
+# OS / Editor
+.vscode/
+.DS_Store
+
+# Power BI / temp files
+*.tmp

@@ -1,0 +1,4 @@
+model_id,modelo,marca,potencia_hp,cilindrada_litros,cilindrada_cm3
+M001,John Deere 6135J,John Deere,135,6.8,6800
+M002,New Holland TT4.90,New Holland,90,2.9,2900
+M003,John Deere 8270R,John Deere,270,9.0,9000
