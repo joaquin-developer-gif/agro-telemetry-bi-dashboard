@@ -1,29 +1,17 @@
-# Etapa 3 - AWS Data Lake
+## Etapa 3 - AWS Data Lake con S3, Glue y Athena
 
-Esta etapa implementa una arquitectura cloud básica para el proyecto Agro Telemetry BI Dashboard utilizando servicios de AWS.
+En esta etapa se implementó una arquitectura básica de Data Lake en AWS para consultar datos de telemetría agrícola usando servicios cloud.
 
-## Objetivo
+### Servicios utilizados
 
-Llevar los archivos CSV generados por el pipeline local hacia una arquitectura cloud de análisis de datos.
+- Amazon S3: almacenamiento de archivos CSV crudos y procesados.
+- AWS Glue Crawler: detección automática de esquemas.
+- AWS Glue Data Catalog: catálogo de tablas.
+- Amazon Athena: consultas SQL serverless sobre datos almacenados en S3.
 
-## Servicios utilizados
+### Bucket S3
 
-- Amazon S3
-- AWS Glue Data Catalog
-- AWS Glue Crawler
-- Amazon Athena
-
-## Flujo de datos
+Bucket utilizado:
 
 ```text
-CSV locales
-    ↓
-Amazon S3
-    ↓
-AWS Glue Crawler
-    ↓
-AWS Glue Data Catalog
-    ↓
-Amazon Athena
-    ↓
-Consultas SQL analíticas
+agro-telemetry-bi-dashboard-joaquin-2026
