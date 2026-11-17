@@ -1,12 +1,22 @@
 # Agro Telemetry BI Dashboard
 
+**Proyecto de inteligencia empresarial aplicado al sector de tecnología agrícola (AgTech).**
+
+---
+
+## Información académica
+
+- **Alumno:** Ramón Joaquín Rodríguez
+- **Materia:** Práctica Profesionalizante 2 (PP2)
+- **Profesor:** Huck Marcelo
+
+---
+
+## Descripción del proyecto
+
 Mini proyecto de Business Intelligence orientado al análisis de telemetría en el sector AgTech.
 
 El objetivo del proyecto es simular datos de telemetría de máquinas agrícolas y transformarlos en métricas útiles para negocio usando Python, SQLite, SQL analítico, archivos CSV procesados y un dashboard ejecutivo en Power BI.
-
-Este proyecto fue creado como práctica para una posición de **BI Developer Jr / Semi-Sr**, trabajando conceptos como SQL analítico, modelado de datos, métricas de negocio, dashboards, visualización de datos y flujo de trabajo con Git/GitHub.
-
----
 
 ## Estado del proyecto
 
@@ -16,12 +26,12 @@ El proyecto cuenta actualmente con dos etapas principales:
 
 En esta etapa se construyó el pipeline de datos:
 
-* Generación de datos simulados de telemetría.
-* Carga de datos en SQLite.
-* Creación de tablas SQL.
-* Consultas analíticas de negocio.
-* Creación de vistas SQL.
-* Exportación de archivos CSV procesados para herramientas BI.
+- Generación de datos simulados de telemetría.
+- Carga de datos en SQLite.
+- Creación de tablas SQL.
+- Consultas analíticas de negocio.
+- Creación de vistas SQL.
+- Exportación de archivos CSV procesados para herramientas BI.
 
 ### Etapa 2 - Power BI Dashboard
 
@@ -29,13 +39,13 @@ En esta etapa se desarrolló un dashboard ejecutivo en Power BI utilizando los C
 
 El dashboard permite visualizar:
 
-* Total de combustible usado.
-* Total de horas trabajadas.
-* Total de alertas operativas.
-* Total de máquinas.
-* Evolución diaria del consumo de combustible.
-* Consumo de combustible por zona.
-* Interactividad entre gráficos y KPIs.
+- Total de combustible usado.
+- Total de horas trabajadas.
+- Total de alertas operativas.
+- Total de máquinas.
+- Evolución diaria del consumo de combustible.
+- Consumo de combustible por zona.
+- Interactividad entre gráficos y KPIs.
 
 ---
 
@@ -43,11 +53,11 @@ El dashboard permite visualizar:
 
 El proyecto busca responder preguntas de negocio como:
 
-* ¿Qué concesionarios tienen mayor uso de máquinas?
-* ¿Qué zonas consumen más combustible?
-* ¿Qué concesionarios generan más alertas operativas?
-* ¿Qué máquinas tienen mayor carga operativa?
-* ¿Qué zonas o concesionarios deberían recibir atención técnica o comercial primero?
+- ¿Qué concesionarios tienen mayor uso de máquinas?
+- ¿Qué zonas consumen más combustible?
+- ¿Qué concesionarios generan más alertas operativas?
+- ¿Qué máquinas tienen mayor carga operativa?
+- ¿Qué zonas o concesionarios deberían recibir atención técnica o comercial primero?
 
 La idea es simular un entorno AgTech con máquinas agrícolas, concesionarios, zonas y eventos de telemetría.
 
@@ -69,23 +79,23 @@ El proyecto utiliza datos simulados de telemetría de máquinas agrícolas.
 
 El proyecto incluye:
 
-* Modelos de máquinas
-* Máquinas individuales
-* Concesionarios
-* Zonas
-* Eventos de telemetría
+- Modelos de máquinas.
+- Máquinas individuales.
+- Concesionarios.
+- Zonas.
+- Eventos de telemetría.
 
 ---
 
 ## Tecnologías utilizadas
 
-* Python
-* SQLite
-* SQL
-* CSV
-* Power BI
-* Power Query
-* Git / GitHub
+- Python
+- SQLite
+- SQL
+- CSV
+- Power BI
+- Power Query
+- Git / GitHub
 
 ---
 
@@ -141,15 +151,15 @@ El flujo actual del proyecto funciona de la siguiente manera:
 
 ```text
 Datos CSV crudos
-    ↓
+       ↓
 Generación de telemetría con Python
-    ↓
+       ↓
 Base de datos SQLite
-    ↓
+       ↓
 Tablas y vistas SQL
-    ↓
+       ↓
 Exportaciones CSV procesadas
-    ↓
+       ↓
 Dashboard ejecutivo en Power BI
 ```
 
@@ -171,14 +181,14 @@ S3 → Glue Data Catalog → Athena SQL → QuickSight Dashboard
 
 El proyecto trabaja conceptos importantes para un rol BI:
 
-* JOINs
-* GROUP BY
-* Agregaciones
-* CTEs
-* Window Functions
-* Rankings
-* Métricas de negocio
-* Vistas listas para dashboard
+- JOINs
+- GROUP BY
+- Agregaciones
+- CTEs
+- Window Functions
+- Rankings
+- Métricas de negocio
+- Vistas listas para dashboard
 
 ---
 
@@ -186,25 +196,12 @@ El proyecto trabaja conceptos importantes para un rol BI:
 
 El proyecto calcula métricas como:
 
-* Uso total de máquinas por concesionario
-* Consumo total de combustible por zona
-* Alertas operativas por concesionario
-* Temperatura promedio del motor
-* Score operativo por concesionario
-* Métricas diarias por máquina
-
-Ejemplo de métrica:
-
-```sql
-ROUND(
-    SUM(hours_worked) * 0.4 +
-    SUM(fuel_used_liters) * 0.3 +
-    total_alerts * 10,
-    2
-) AS operational_score
-```
-
-Este score ayuda a identificar qué concesionarios tienen mayor prioridad operativa.
+- Uso total de máquinas por concesionario.
+- Consumo total de combustible por zona.
+- Alertas operativas por concesionario.
+- Temperatura promedio del motor.
+- Score operativo por concesionario.
+- Métricas diarias por máquina.
 
 ---
 
@@ -222,12 +219,12 @@ powerbi/agro_telemetry_dashboard.pbix
 
 El dashboard incluye una vista ejecutiva con KPIs y gráficos principales:
 
-* Total de combustible usado
-* Total de horas trabajadas
-* Total de alertas
-* Total de máquinas
-* Consumo diario de combustible
-* Consumo de combustible por zona
+- Total de combustible usado.
+- Total de horas trabajadas.
+- Total de alertas.
+- Total de máquinas.
+- Consumo diario de combustible.
+- Consumo de combustible por zona.
 
 ![Executive Overview - Power BI](powerbi/executive-overview.png)
 
@@ -243,7 +240,7 @@ python -m venv venv
 
 ### 2. Activar el entorno virtual en Windows PowerShell
 
-```bash
+```powershell
 .\venv\Scripts\activate
 ```
 
@@ -289,50 +286,17 @@ data/processed/
 
 Archivos generados:
 
-* `dealer_summary.csv`
-* `zone_summary.csv`
-* `machine_summary.csv`
-* `daily_metrics.csv`
+- `dealer_summary.csv`
+- `zone_summary.csv`
+- `machine_summary.csv`
+- `daily_metrics.csv`
 
 Estos archivos pueden ser utilizados en:
 
-* Power BI
-* Metabase
-* Looker Studio
-* Amazon QuickSight
-
----
-
-## Valor del proyecto
-
-Este proyecto demuestra cómo transformar datos operativos de telemetría en información útil para la toma de decisiones.
-
-No se enfoca solamente en la parte técnica, sino también en preguntas de negocio:
-
-> Un dashboard es útil solamente si ayuda a alguien a tomar una mejor decisión.
-
-El proyecto cubre un flujo BI completo:
-
-```text
-Python + SQL → CSV procesados → Power BI → Insights de negocio
-```
-
----
-
-## Relación con un rol BI Developer
-
-Este proyecto practica habilidades importantes para un puesto BI Developer Jr / Semi-Sr:
-
-* SQL analítico
-* Modelado de datos
-* Limpieza y preparación de datos
-* Creación de métricas de negocio
-* Generación de vistas para BI
-* Exportación de datos procesados
-* Creación de dashboard en Power BI
-* Análisis visual de KPIs
-* Pensamiento orientado a negocio
-* Flujo de trabajo con Git/GitHub
+- Power BI
+- Metabase
+- Looker Studio
+- Amazon QuickSight
 
 ---
 
@@ -342,33 +306,22 @@ El proyecto fue organizado en ramas y tags para simular un flujo de trabajo prof
 
 ### Ramas principales
 
-* `main`: versión estable del proyecto.
-* `developer`: rama de desarrollo general.
-* `etapa-1`: versión estable de la Etapa 1.
-* `etapa-2-power-bi`: rama utilizada para desarrollar el dashboard en Power BI.
+- `main`: versión estable del proyecto.
+- `developer`: rama de desarrollo general.
+- `etapa-1`: versión estable de la Etapa 1.
+- `etapa-2-power-bi`: rama utilizada para desarrollar el dashboard en Power BI.
 
 ### Tags
 
-* `v0.1.0-etapa-1`: versión estable con Python, SQLite, SQL y exportación de CSV.
-* `v0.2.0-etapa-2-power-bi`: versión estable con dashboard ejecutivo en Power BI.
+- `v0.1.0-etapa-1`: versión estable con Python, SQLite, SQL y exportación de CSV.
+- `v0.2.0-etapa-2-power-bi`: versión estable con dashboard ejecutivo en Power BI.
 
 ---
 
-## Futuras mejoras
+## Autor
 
-* Crear más páginas en Power BI:
+**Ramón Joaquín Rodríguez**
 
-  * Rendimiento por concesionario
-  * Análisis por máquina
-  * Alertas operativas
-* Agregar medidas DAX personalizadas
-* Mejorar diseño visual del dashboard
-* Crear dashboard en Metabase
-* Agregar almacenamiento en AWS S3
-* Agregar catálogo con AWS Glue
-* Consultar datos con Amazon Athena
-* Crear dashboard en Amazon QuickSight
-* Agregar modelos con dbt
-* Agregar controles de calidad de datos
-* Generar datasets más grandes
-* Automatizar el pipeline completo
+Proyecto desarrollado en el marco de la materia **Práctica Profesionalizante 2 (PP2)**.
+
+**Profesor:** Huck Marcelo.
